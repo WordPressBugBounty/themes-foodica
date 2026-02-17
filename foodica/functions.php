@@ -6,7 +6,7 @@
 /**
  * Define Constants
  */
-define( 'FOODICA_THEME_VERSION', '1.3.1' );
+define( 'FOODICA_THEME_VERSION', '1.3.2' );
 define( 'FOODICA_THEME_DIR', trailingslashit( get_template_directory() ) );
 define( 'FOODICA_THEME_URI', trailingslashit( esc_url( get_template_directory_uri() ) ) );
 define( 'FOODICA_THEME_ASSETS_URI', FOODICA_THEME_URI . 'dist' );
@@ -177,7 +177,7 @@ function foodica_get_featured_content() {
  *
  */
 function foodica_custom_logo() {
-    has_custom_logo() ? the_custom_logo() : printf('<h2><a href="%s" title="%s">%s</a></h2>', esc_url(home_url()), get_bloginfo('description'), get_bloginfo('name'));
+    has_custom_logo() ? the_custom_logo() : printf('<h2><a href="%s" title="%s">%s</a></h2>', esc_url(home_url()), esc_attr(get_bloginfo('description')), esc_html(get_bloginfo('name')));
 }
 
 

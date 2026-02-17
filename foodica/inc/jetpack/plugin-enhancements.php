@@ -12,12 +12,27 @@ class Foodica_Theme_Plugin_Enhancements {
 	/**
 	 * @var array; holds the information of the plugins declared as enhancements
 	 */
-	var $plugins;
+	public $plugins;
 
 	/**
 	 * @var boolean; whether to display an admin notice or not.
 	 */
-	var $display_notice = false;
+	public $display_notice = false;
+
+	/**
+	 * @var array; holds the theme dependencies.
+	 */
+	public $dependencies = array();
+
+	/**
+	 * @var array; holds the required Jetpack modules.
+	 */
+	public $modules = array();
+
+	/**
+	 * @var array; holds modules that are not activated.
+	 */
+	public $unactivated_modules = array();
 
 	/**
 	 * Init function.
