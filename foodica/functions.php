@@ -6,7 +6,7 @@
 /**
  * Define Constants
  */
-define( 'FOODICA_THEME_VERSION', '1.3.2' );
+define( 'FOODICA_THEME_VERSION', wp_get_theme( 'foodica' )->get( 'Version' ) );
 define( 'FOODICA_THEME_DIR', trailingslashit( get_template_directory() ) );
 define( 'FOODICA_THEME_URI', trailingslashit( esc_url( get_template_directory_uri() ) ) );
 define( 'FOODICA_THEME_ASSETS_URI', FOODICA_THEME_URI . 'dist' );
@@ -203,13 +203,13 @@ function foodica_enqueue_scripts() {
 
 	wp_enqueue_style( 'dashicons' );
 
-    wp_enqueue_script( 'slicknav', get_template_directory_uri() . '/assets/js/foodica-slicknav.min.js', array( 'jquery' ), '1.2.0', true );
+    wp_enqueue_script( 'slicknav', get_template_directory_uri() . '/assets/js/foodica-slicknav.min.js', array( 'jquery' ), wp_get_theme()->get( 'Version' ), true );
 
-    wp_enqueue_script( 'flickity', get_template_directory_uri() . '/assets/js/flickity.pkgd.min.js', array(), '1.2.0', true );
+    wp_enqueue_script( 'flickity', get_template_directory_uri() . '/assets/js/flickity.pkgd.min.js', array(), wp_get_theme()->get( 'Version' ), true );
 
-    wp_enqueue_script( 'fitvids', get_template_directory_uri() . '/assets/js/foodica-jquery.fitvids.js', array( 'jquery' ), '1.0.0', true );
+    wp_enqueue_script( 'fitvids', get_template_directory_uri() . '/assets/js/foodica-jquery.fitvids.js', array( 'jquery' ), wp_get_theme()->get( 'Version' ), true );
 
-    wp_enqueue_script( 'superfish', get_template_directory_uri() . '/assets/js/superfish.min.js', array( 'jquery' ), '1.2.0', true );
+    wp_enqueue_script( 'superfish', get_template_directory_uri() . '/assets/js/superfish.min.js', array( 'jquery' ), wp_get_theme()->get( 'Version' ), true );
 
     wp_enqueue_script( 'foodica-search_button', get_template_directory_uri() . '/assets/js/foodica-search_button.js', array(), wp_get_theme()->get( 'Version' ), true );
 
